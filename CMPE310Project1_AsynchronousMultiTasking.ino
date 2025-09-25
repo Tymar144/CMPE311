@@ -73,7 +73,7 @@ void blinkLED2(){
 void setDuration(){
   if(askingLED != 0){
     int whatLED = Serial.parseInt();
-    if(whatLED != 0){
+    if(whatLED == 1 || whatLED == 2){
       LEDToChange = whatLED;
       Serial.println("What interval (in msec)");
       askingLED = 0;
